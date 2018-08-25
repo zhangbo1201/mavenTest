@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="cn.edu.hhit.dao.TestDao">
+    <resultMap id="TrainFileMap" type="cn.edu.hhit.entity.TrainFile">
+        <result property="id" column="ID"/>
+        <result property="name" column="NAME"/>
+    </resultMap>
+    <select id="getCount" resultMap="TrainFileMap">
+		SELECT * FROM NAME for update
+	</select>
+    <update id="update"  parameterType="java.lang.String" timeout="20000">
+       update  name set name =  #{name}
+       where id=#{id}
+    </update>
+</mapper>
+
+
+
+
+
+
+

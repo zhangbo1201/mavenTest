@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<script src="../static/js/vue.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{ message }}
+</div>
+<div id="app-2">
+
+    <button v-on:click="counter += 1">add 1</button>
+    <p>The button above has been clicked {{ counter }} times.</p>
+    <button type="submit"></button>
+</div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!'
+        }
+    });
+    app.message='改变';
+    var app2 = new Vue({
+        el: '#app-2',
+        data: {
+            message: '页面加载于 ' + new Date().toLocaleString(),
+            show:'展示',
+            counter:0
+        }
+    });
+</script>
+</html>
