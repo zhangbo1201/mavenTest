@@ -17,7 +17,7 @@ public class ContextStrategyFactory {
     @Autowired
     private Map<String, IContextStrategy> contextStrategy;
 
-    public IContextStrategy doStrategy(String type){
+    public IContextStrategy getStrategy(String type){
 
         return this.contextStrategy.get(type);
     }

@@ -28,7 +28,7 @@ public class StrategyTest {
     @Test
     public void testdoStrategy(){
         ContextStrategyFactory contextStrategyFactory = ctx.getBean(ContextStrategyFactory.class);
-        IContextStrategy contextStrategy =  contextStrategyFactory.doStrategy("cn.edu.hhit.service.strategy.AliContextStrategy");
+        IContextStrategy contextStrategy =  contextStrategyFactory.getStrategy("cn.edu.hhit.service.strategy.AliContextStrategy");
         Map map = Maps.newConcurrentMap();
         map.put("1","张波");
         contextStrategy.staff(map);
